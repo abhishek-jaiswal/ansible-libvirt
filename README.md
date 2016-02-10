@@ -74,19 +74,29 @@ we are currently providing :-
 ```
 
 ###### Create a raw disk 
-```yaml - qemu-img: dest=/var/lib/libvirt/images/test.img disk_type=raw  size=8G state=present force=yes ```
+```yaml
+- qemu-img: dest=/var/lib/libvirt/images/test.img disk_type=raw  size=8G state=present force=yes 
+```
 
 ######## Create a volume 
-```yaml  - qemu-img: name=testing.qcow2 disk_type=volume  size=8G state=present force=yes ```
+```yaml  
+- qemu-img: name=testing.qcow2 disk_type=volume  size=8G state=present force=yes 
+```
 
 ######## Convert image
-```yaml  - qemu-img: src_img=/var/lib/libvirt/images/test5.img dest_img=/var/lib/libvirt/images/test5.qcow2 disk_type=qcow2 state=convert ```
+```yaml  
+- qemu-img: src_img=/var/lib/libvirt/images/test5.img dest_img=/var/lib/libvirt/images/test5.qcow2 disk_type=qcow2 state=convert 
+```
 
 ######## Delete Raw Disk
-```yaml  - qemu-img: dest=/var/lib/libvirt/images/test4.img  disk_type=raw state=absent ```
+```yaml  
+- qemu-img: dest=/var/lib/libvirt/images/test4.img  disk_type=raw state=absent 
+```
 
 ######## Delete Volume Disk
-```yaml  - qemu-img:  name=test.qcow2  disk_type=volume state=absent ```
+```yaml  
+- qemu-img:  name=test.qcow2  disk_type=volume state=absent 
+```
 
 
 
